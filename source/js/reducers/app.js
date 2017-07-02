@@ -11,7 +11,7 @@ const actionsMap = {
     [LOAD_ADVERTISEMENTS]: (state, action) => {
       return Object.assign({}, state, {
         meta: action.payload.meta,
-        advertisements: action.payload.data,
+        advertisements: action.payload.data.slice(0,10),
       })
     },
   }

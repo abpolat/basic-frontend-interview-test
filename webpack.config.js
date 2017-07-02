@@ -174,6 +174,12 @@ module.exports = {
     inline: !isProduction,
     hot: !isProduction,
     host: '0.0.0.0',
+    proxy: {
+      "/v1/advertisements": {
+        target: 'https://api.mcmakler.de',
+        changeOrigin: true
+      }
+    },
     disableHostCheck: true,
     stats: {
       assets: true,
